@@ -375,9 +375,6 @@ cb_backup (){
                 # Remove full archives older than $BKUP_DAYS_FULL
                 find ./$world-*-incr.tar.gz -type f -mtime +$BKUP_DAYS_INCR -print | xargs /bin/rm -f
                 find ./$world-*-full.tar.gz -type f -mtime +$BKUP_DAYS_FULL -print | xargs /bin/rm -f
-                find ./$world-*-incr.tar -type f -mtime +$BKUP_DAYS_INCR -print | xargs /bin/rm -f
-                find ./$world-*-full.tar -type f -mtime +$BKUP_DAYS_FULL -print | xargs /bin/rm -f
-                find ./$world-*-full.tgz -type f -mtime +$BKUP_DAYS_FULL -print | xargs /bin/rm -f
 
                 # Now make our full backup
                 pushd $WORLD_PATH
@@ -392,7 +389,6 @@ cb_backup (){
                 FILENAME=$FILENAME-incr.tar.gz
                 # Remove incrementals older than $BKUP_DAYS_INCR
                 find ./$world-*-incr.tar.gz -type f -mtime +$BKUP_DAYS_INCR -print | xargs /bin/rm -f
-                find ./$world-*-incr.tar -type f -mtime +$BKUP_DAYS_INCR -print | xargs /bin/rm -f
 
                 pushd $WORLD_PATH
                 find $world -newer $BACKUP_FULL_LINK -type f -print > $BACKUP_FILES
