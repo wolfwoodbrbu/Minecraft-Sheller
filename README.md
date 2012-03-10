@@ -31,20 +31,20 @@ configuration phase has to be available to him.
 - I strongly recommend using crontab to automate some of the process. 
 - For example:
 - 30 */1 * * * /home/minecraft/craftbukkit/minecraft.sh backup
--- So every hour on the half-hour an incrimental backup is made
+- So every hour on the half-hour an incrimental backup is made
 - 58 4 * * * /home/minecraft/craftbukkit/minecraft.sh backup full logs
--- At 4:58am a logs full backup is run which stops the server, runs the "logs clean", deletes the server.log file, does a full backup of the worlds, and restarts the server. 
+- At 4:58am a logs full backup is run which stops the server, runs the "logs clean", deletes the server.log file, does a full backup of the worlds, and restarts the server. 
 - 58 0,8,12,16,20 * * * /home/minecraft/craftbukkit/minecraft.sh restart sched
--- At every 4th hour 58min except at 4:58am the server gets a scheduled restart to clear the memory
+- At every 4th hour 58min except at 4:58am the server gets a scheduled restart to clear the memory
 - */10 * * * * /home/minecraft/craftbukkit/minecraft.sh checkup
--- Every 10 min's check to see if the server's up if not it start's the server if the DO_CHECK is set to 1 in the script
+- Every 10 min's check to see if the server's up if not it start's the server if the DO_CHECK is set to 1 in the script
 
 - I made an alias to be able to use 'minecraft command' instead of 
 './minecraft.sh command'. It also enables the automatic completion, if 
 you type 'mine' then press tab. Much quicker =) You can do this by 
 editing /home/USER/.bashrc, and adding the line:
 
-#####     alias minecraft="/home/minecraft/minecraft.sh"
+#####     alias minecraft="/home/minecraft/craftbukkit/minecraft.sh"
 
 **(of course, change the path if needed)**
 
