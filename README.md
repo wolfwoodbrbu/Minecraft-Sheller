@@ -40,8 +40,7 @@ configuration phase has to be available to him.
 - Every 10 min's check to see if the server's up if not it start's the server if the DO_CHECK is set to 1 in the script
 
 - I made an alias to be able to use 'minecraft command' instead of 
-'./minecraft.sh command'. It also enables the automatic completion, if 
-you type 'mine' then press tab. Much quicker =) You can do this by 
+'./minecraft.sh command'. Much quicker =) You can do this by 
 editing /home/USER/.bashrc, and adding the line:
 
 #####     alias minecraft="/home/minecraft/craftbukkit/minecraft.sh"
