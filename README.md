@@ -143,7 +143,7 @@ How long will the logs be kept? _(Only used with the './minecraft.sh logs clean'
 **Mapping**
 
 Dynmap web chat fix. For when the web chat is spewing out the same line over and over
-    
+
     DYNMAP_WEBCHAT_PATH=/home/minecraft/www/map/web/standalone/
 The path to the folder that holds the dynmap_webchat.json file on your server
 Does Dynmap's internal web server use the same file for webchat just in the /plugins/dynmap/web/* folder?
